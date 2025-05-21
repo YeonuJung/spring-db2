@@ -1,6 +1,6 @@
 package hello.itemservice;
 
-import hello.itemservice.config.JpaConfig;
+import hello.itemservice.config.SpringDataJpaConfig;
 import hello.itemservice.repository.ItemRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +14,8 @@ import org.springframework.context.annotation.Profile;
 // @Import(JdbcTemplateV2Config.class)
 // @Import(JdbcTemplateV3Config.class)
 // @Import(MyBatisConfig.class)
-@Import(JpaConfig.class)
+// @Import(JpaConfig.class)
+@Import(SpringDataJpaConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web")
 public class ItemServiceApplication {
 
